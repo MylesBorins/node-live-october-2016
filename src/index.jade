@@ -1,0 +1,428 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title The CITGM Diaries
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  style.
+    .hello {
+      background-image: url('images/hello-tharr.gif')
+    }
+    
+    .canary {
+      background-image: url('images/canary.gif')
+    }
+
+    .smoke {
+      background-image: url('images/smoke.jpg')
+    }
+    
+    .complicated {
+      background-image: url('images/complicated.gif')
+    }
+    
+    .confused {
+      background-image: url('images/confused.gif')
+    }
+    
+    .wutang {
+      background-image: url('images/wutang.gif')
+    }
+    
+    .pupper {
+      background-image: url('images/pupper.gif')
+    }
+    
+    .kitt {
+      background-image: url('images/kitt.gif')
+    }
+    
+    .pupper-too {
+      background-image: url('images/pupper-too.gif')
+    }
+    
+    .burrito-pupper {
+      background-image: url('images/burrito-pupper.gif')
+    }
+    
+    .recurse {
+      background-image: url('images/recurse.gif')
+    }
+    
+    .confused-bowie {
+      background-image: url('images/confused-bowie.gif')
+    }
+    .chuck-thumbs-up {
+      background-image: url('images/chuck.gif')
+    }
+    
+    .precog {
+      background-image: url('images/precog.jpg')
+    }
+    
+    .breaking {
+      background-image: url('images/breaking.gif')
+    }
+    
+    .disgusted-bowie {
+      background-image: url('images/disgusted-bowie.gif')
+    }
+    
+    .oh-no {
+      background-image: url('images/oh-no.gif')
+    }
+    
+    .fire {
+      background-image: url('images/fire.gif')
+    }
+    
+    .lucile {
+      background-image: url('images/lucile.gif')
+    }
+
+  body
+    article.minus-one
+      section
+        h2 The CITGM Diaries:
+        h3 Things break in mysterious and beautiful ways
+        h4 With your host Myles Borins
+        h4
+          a(href='https://twitter.com/thealphanerd') @thealphanerd
+        p  Node Live October 2016
+        
+      section(data-bespoke-backdrop='hello')
+        h1 Howdy
+        
+      section
+        h1 My Name is Myles
+        img.headroom(src='images/me.jpg' alt='itsa me!' width='200px' height='200px')
+      
+      section
+        h3 I currently work at a small disruptive startup called IBM
+        h4 contributing to Node.js
+        
+        img.headroom(src='images/ibm.jpg' alt='Eye Bee M by Paul Rand')
+        
+        h5 The opinions expressed in this talk are solely my own
+      
+      section
+        h1 So what exactly is CITGM?
+      
+      section(data-bespoke-backdrop='canary')
+        h3 The acronym stands for
+        h2 Canary in the Gold Mine
+      
+      section(data-bespoke-backdrop='smoke')
+        h3 It is the Smoke testing utility
+        h4 That we use in the Node.js Project
+        h3 To make sure we don't break your code!
+        h4 and that the ecosystem is healthy
+      
+      section
+        h2 citgm grabs the source code of a named module
+        h3 runs npm install and npm test
+        h4 it then reports results
+        
+      section
+        h4 it has a logger with various verbosity levels
+        img(src='images/pass.png' alt='it totes passed!' width='60%')
+        img.headroom(src='images/install-verbose.gif' alt='such verbosity!')
+      
+      section
+        h4 Results can be published as:
+        h2 mardown
+        img.headroom(src='images/markdown.png' alt='nice markdown!' width='80%')
+      section
+        h4 Results can be published as:
+        h2 tap
+        img.headroom(src='images/tap.png' alt='tap it in' width='80%')
+      section
+        h4 Results can be published as:
+        h2 xunit
+        img.headroom(src='images/xunit.png' alt='xunit reporter' width='80%')
+
+      section(data-bespoke-backdrop='recurse')
+        h1 citgm-all
+        h2.headroom Currently testing
+        h2 70 modules
+      
+      section
+        h2 This includes:
+        h3 core ecosystem modules
+        
+        ul
+          li.hide
+          li request
+          li express
+          li body-parser
+          li graceful-fs
+          li level
+          li async
+          li ws
+          li socket.io
+          li serialport
+          li lodash && underscore
+          li q && bluebird
+      
+      section
+        h2 This includes:
+        h3 modules for streams
+        
+        ul
+          li.hide
+          li readable-stream
+          li through2
+          li split2
+          li duplexer2
+          li bl
+          li binary-split
+          li sax
+          li duplexify
+          li pumpify
+          li from2
+      
+      seciton
+        h2 This includes:
+        h3 modules for the front end and tooling
+        ul
+          li.hide
+          li browserify
+          li vinyl-fs
+          li gulp
+          li react
+          li jQuery
+          li node-sass
+          li ember-cli
+          li commander
+          li pug
+      
+      section(data-bespoke-backdrop='confused-bowie')
+        h1 Why exactly are you doing that?
+      
+      section
+        h2 Every test in the Node.js ecosystem
+        h3 is an integration test for core
+
+      section(data-bespoke-backdrop='precog')
+        h1 We can find out what is going to break, before it breaks
+      
+      section
+        h2 We run citgm in CI
+        h3 it is now mandatory to be passing
+        h4 For all semver-major changes and releases
+        img.headroom(src='images/ci.png' alt='show some images of our CI in jenkins' width='60%')
+
+      section(data-bespoke-backdrop='complicated')
+        h1 How does it work?
+      
+      section(data-bespoke-backdrop='wutang')
+        h1 We do a lot of wrapping
+      
+      section
+        h1 npm view
+      
+      section(data-bespoke-backdrop='pupper')
+        h1 we wrap that
+      
+      section
+        h1 npm pack
+      
+      section(data-bespoke-backdrop='kitt')
+        h1 we wrap that
+      
+      section
+        h1 npm install
+        
+      section(data-bespoke-backdrop='pupper-too')
+        h1 we wrap that
+      
+      section
+        h1 npm test
+      
+      section(data-bespoke-backdrop='burrito-pupper')
+        h1 we wrap that
+
+      //- section(data-bespoke-backdrop='recurse')
+      //-   h1 I'm considering abstracting it
+
+      section(data-bespoke-backdrop='disgusted-bowie')
+        h1 Why would you use so many child processes?
+      
+      section(data-bespoke-backdrop='chuck-thumbs-up')
+        h2 npm already does all this stuff!
+        h3 Every build we do in CI already has it!
+        h4 The npm cli api is not going to change on us
+
+      section
+        h1 Dear Diary
+      
+      section(data-bespoke-backdrop='breaking')
+        h1 Today we broke npm
+
+      section
+        h3 It turns an api deprecated in 2010
+        h4 was never actually deprecated
+        img.headroom(src='images/0-fs-read.png' width='70%')
+
+      section
+        h3 So it was decided to deprecate it
+        h4 but only with a warning
+        img(src='images/1-fs-read.png' width='70%')
+      
+      section
+        h3 The change landed
+        img(src='images/2-fs-read.png' width='70%')
+
+      section
+        h3 It broke npm on master
+        img(src='images/3-fs-read.png' width='70%')
+      
+      section
+        h3 Due to the way in which graceful-fs works
+        img(src='images/4-fs-read.png' width='70%')
+      
+      section
+        h3 A short term solution was made to give people time
+        img(src='images/5-fs-read.png' width='70%')
+      
+      section
+        img(src='images/6-fs-read.png' width='70%')
+      
+      section
+        h2 How were we to know
+        h3 that a warning
+        h4 would break the world
+
+      section
+        h1 Dear Diary
+
+      section(data-bespoke-backdrop='oh-no')
+        h1 Today Body Parser Broke
+
+      section
+        img(src='images/change-parse.png' width='70%' height='70%')
+      
+      section
+        img(src='images/diff.png' width='70%' height='70%')
+      
+      section
+        img(src='images/infinity.png' width='70%' height='70%')
+      
+      section
+        h2 Before Change
+        pre
+          code.language-javascript.
+            > var parse = require('querystring').parse;
+            > parse('%p=123', undefined, undefined,
+            >  {maxKeys: Infinity}).length;
+            < 1
+      section
+        h2 After Change
+        pre
+          code.language-javascript.
+            > var parse = require('querystring').parse;
+            > parse('%p=123', undefined, undefined,
+            >   {maxKeys: Infinity}).length;
+            < 0
+      
+      section
+        h2 Sometimes a patch
+        h3 is much more disruptive
+        h4 than it seems at first
+      
+      section
+        h1 Dear Diary
+      
+      section(data-bespoke-backdrop='fire')
+        h1 Today we accidentally broke gulp
+      
+      section
+        h3 Now that v7 is coming
+        h4 we decided to revert the hack in fs
+        img(src='images/7-fs-read.png' width='70%')
+        
+      section
+        img(src='images/8-fs-read.png' width='70%')
+      
+      section
+        h2 After failures on citgm
+        h3 We decided to do an ecosystem scan
+        img(src='images/9-fs-read.png' width='70%')
+      
+      section
+        h2 It broke 5%
+        h3 of all modules on npm
+        img(src='images/10-fs-read.png' width='70%')
+      
+      section
+        h2 we got the list down
+        h3 but gulp 3 was still affected
+        img(src='images/11-fs-read.png' width='70%')
+      
+      section
+        h2 In fact, the gulp ecosystem
+        h3 was not an insignicant number of the broken packages
+        img(src='images/12-fs-read.png' width='70%')
+      
+      section
+        h2 To avoid breaking the world
+        h3 I did a little raggae
+        img(src='images/13-fs-read.png' width='70%')
+      
+      section
+        img(src='images/14-fs-read.png' width='70%')
+      
+      section
+        h2 Unfortunately
+        h3 it was not enough
+        img(src='images/15-fs-read.png' width='70%')
+      
+      section
+        h2 We almost gave up
+        img.headroom(src='images/16-fs-read.png' width='70%')
+      
+      section
+        h2 Until Isaacs came up
+        h3 with an elegant solution that backported
+        img(src='images/17-fs-read.png' width='70%')
+      
+      section
+        img(src='images/18-fs-read.png' width='70%')
+      
+      section
+        img(src='images/19-fs-read.png' width='70%')
+        
+      section
+        img(src='images/20-fs-read.png' width='70%')
+      
+      section
+        h3 As of Node v7 this will no longer be a problem
+        img(src='images/21-fs-read.png' width='70%')
+
+      section
+        h1 Dear Diary
+      
+      section
+        h1 Even though we broke lots of stuff
+      
+      section
+        h1 Most people didn't notice
+      
+      section(data-bespoke-backdrop='lucile')
+        h1 That is a reason to celebrate
+
+      section
+        h2 Thank You
+        img.headroom(src='images/picard-flute.gif' alt='best episode ever' width='30%')
+        h3 Myles Borins
+        h4 @thealphanerd
+
+    div#ibm
+      h3 IBM
+
+    div#twits
+      h3 @thealphanerd
+    script(src='build/build.js')
